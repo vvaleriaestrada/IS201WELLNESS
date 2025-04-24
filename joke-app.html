@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Joke Generator - Wellness Vibes</title>
+  <style>
+    body {
+      font-family: 'Georgia', serif;
+      background-color: #f5f3ee;
+      color: #3b3a30;
+      text-align: center;
+      padding: 50px;
+    }
+
+    h1 {
+      color: #6b705c;
+      margin-bottom: 30px;
+    }
+
+    button {
+      background-color: #a98467;
+      color: white;
+      padding: 12px 24px;
+      border: none;
+      font-size: 18px;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #90755a;
+    }
+
+    .joke {
+      margin-top: 30px;
+      font-size: 20px;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+      background: #fffdf8;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(150, 140, 120, 0.1);
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Wellness Break: Laugh a Little 😄</h1>
+  <button onclick="tellJoke()">Tell me a joke!</button>
+  <div class="joke" id="jokeText"></div>
+
+  <script>
+    const jokes = [
+      "Why did the meditation instructor get kicked out of school? For having no class.",
+      "I started a wellness blog… but it was just a bunch of thyme and sage advice.",
+      "Why don’t yogis ever get lost? Because they always follow their inner GPS.",
+      "I told my plants I love them. Now they won’t leaf me alone."
+    ];
+
+    function tellJoke() {
+      const randomJoke = jokes[Math.floor(Math.random() * jokes.length)];
+      document.getElementById('jokeText').innerText = randomJoke;
+    }
+  </script>
+
+</body>
+</html>
